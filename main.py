@@ -9,10 +9,6 @@ for i in string: #перебор строки
         glas_count+=1
     elif i in sogl:
         sogl_count+=1
-    elif(string[i]==''):
-        space_count+=1
-          
-
 print(f"длина строки {len(string)}") #вывод
 print(f"количество гласных {glas_count}")
 print(f"количество согласных {sogl_count}")
