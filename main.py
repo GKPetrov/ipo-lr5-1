@@ -1,22 +1,21 @@
-a =str(input("Введите cтроку ")) #Ввод строки
-gl='уеыаоэяиюУЕЫАОЭЯИЮ' #строка гласных
-gl_count=0 #инициализация переменных
+string = input("Введите cтроку ") #Ввод строки
+glas='уеыаоэяиюУЕЫАОЭЯИЮ' #строка гласных
+sogl ='йцкнгшщзхъфвпрлджчсмтьбЙЦКНГШЩЗХЪФВПРЛДЖЧСМТЬБ'
+glas_count=0 #инициализация переменных
+sogl_count=0
 space_count=0
-for i in range(len(a)): #перебор строки
-    for b in range(len(gl)):
-        if(gl[b]==a[i]):
-            gl_count+=1
-            b+=1
-        elif(a[i]==''):
-            space_count+=1
+for i in string: #перебор строки
+    if i in glas:
+        glas_count+=1
+    elif i in sogl:
+        sogl_count+=1
+    elif(string[i]==''):
+        space_count+=1
           
 
-    
-sogl_count=len(a)-gl_count-space_count #подсчет числа согласных 
-print(f"длина строки {len(a)}") #вывод
-print(f"количество гласных {gl_count}")
+print(f"длина строки {len(string)}") #вывод
+print(f"количество гласных {glas_count}")
 print(f"количество согласных {sogl_count}")
-
         
 
 
